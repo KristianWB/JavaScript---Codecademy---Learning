@@ -1,4 +1,4 @@
-let menu = {
+const menu = {
     _courses: {
       appetizers: [],
       mains: [],
@@ -22,6 +22,12 @@ let menu = {
       } ;
     },
     
-    addDishToCourse(courseName, dishName, dishPrice) {}
-    
+    addDishToCourse(courseName, dishName, dishPrice) {
+     const dish = {
+       dishName: dishName,
+       dishPrice: dishPrice
+     } 
+     this._courses[courseName].push(dish);
+  
+    }  
   };

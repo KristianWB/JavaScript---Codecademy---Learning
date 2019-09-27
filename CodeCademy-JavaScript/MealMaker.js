@@ -22,4 +22,6 @@ let menu = {
       } ;
     },
     
+    addDishToCourse(courseName, dishName, dishPrice) {}
+    
   };

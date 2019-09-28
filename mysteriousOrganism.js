@@ -17,6 +17,7 @@ const returnRandBase = () => {
     return {
       specimenNum: number,
       dna: [dnaSequence],
+      
       mutate(){
         let randNum = Math.floor(Math.random() * this.dna.length)
         let randBase = returnRandBase()
@@ -30,15 +31,28 @@ const returnRandBase = () => {
           randBase = returnRandBase();
             }
         }
-      }
+      },
+      
+      compareDna(creature) {
+        let count =0;
+        for (let i = 0; i<this.dna[0].length; i++)
+          if (this.dna[0][i] === creature.dna[0][i]) {
+            count++
+          }
+        let percent = Math.floor(count / this.dna[0].length * 100)
+          console.log(`the two DNA strings have ${percent}% in common`) 
+      },
     }
   };
   
-  let mutant = pAequorFactory(1 , mockUpStrand());
-  console.log(mutant.specimenNum + '\n' + mutant.dna)
+  let mutantOne = pAequorFactory(1 , mockUpStrand());
+  console.log(mutantOne.specimenNum + '\n' + mutantOne.dna)
   
-  mutant.mutate()
-  console.log(mutant.specimenNum + '\n' + mutant.dna)
+  mutantOne.mutate()
+  console.log(mutantOne.dna[0].join(''))
+  let mutantTwo = pAequorFactory(2 , mockUpStrand());
+  console.log(mutantTwo.dna[0].join(''))
+  mutantOne.compareDna(mutantTwo)
   
   
   // console.log(pAequorFactory(1, mockUpStrand()));

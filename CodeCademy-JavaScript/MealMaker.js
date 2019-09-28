@@ -24,8 +24,8 @@ const menu = {
   
   addDishToCourse(courseName, dishName, dishPrice) {
    const dish = {
-     dishName: dishName,
-     dishPrice: dishPrice
+     name: dishName,
+     price: dishPrice
    } 
    this._courses[courseName].push(dish);
 
@@ -43,7 +43,7 @@ const menu = {
     let dessert = getRandomDishFromCourse(desserts);
     
     //Calculating total price
-    let totalPrice = appetizer[1]+main[1]+desserts[1];
-    const meal = [appetizer, main, dessert, totalPrice];
+    let totalPrice = appetizer.price+main.price+desserts.price;
+    const meal = [appetizer.name, main.name, dessert.name, totalPrice];
   }
 };

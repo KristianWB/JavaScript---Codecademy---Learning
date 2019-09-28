@@ -42,6 +42,21 @@ const returnRandBase = () => {
         let percent = Math.floor(count / this.dna[0].length * 100)
           console.log(`the two DNA strings have ${percent}% in common`) 
       },
+      
+      willLikelySurvive(){
+        let count =0;
+        for (let i = 0; i<this.dna[0].length; i++){
+          if (this.dna[0][i] === 'C' || this.dna[0][i] === 'G'){
+            count++
+          }
+        }
+        let percentile = count / this.dna[0].length * 100;
+        console.log(percentile)
+        if (percentile >= 60) {
+         return true       
+        } else 
+          return false
+      },
     }
   };
   
@@ -54,9 +69,7 @@ const returnRandBase = () => {
   console.log(mutantTwo.dna[0].join(''))
   mutantOne.compareDna(mutantTwo)
   
-  
-  // console.log(pAequorFactory(1, mockUpStrand()));
-  
+  console.log(mutantOne.willLikelySurvive())
   
   
   

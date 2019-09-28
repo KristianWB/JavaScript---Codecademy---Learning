@@ -18,13 +18,31 @@ const returnRandBase = () => {
       specimenNum: number,
       dna: [dnaSequence],
       mutate(){
-        dna[Math.floor(Math.random() * dna.length)];
-        returnRandBase()
+        let randNum = Math.floor(Math.random() * this.dna.length)
+        let randBase = returnRandBase()
+        
+        while (true) {
+        if (randBase != this.dna[0][Math.floor(Math.random() * 									this.dna.length)]) {
+          this.dna[0].splice(randNum, 1, randBase);
+          break;
+        } else {
+          console.log('No mutation! \n remutating')
+          randBase = returnRandBase();
+            }
+        }
       }
     }
   };
   
-  console.log(pAequorFactory(1, mockUpStrand()));
+  let mutant = pAequorFactory(1 , mockUpStrand());
+  console.log(mutant.specimenNum + '\n' + mutant.dna)
+  
+  mutant.mutate()
+  console.log(mutant.specimenNum + '\n' + mutant.dna)
+  
+  
+  // console.log(pAequorFactory(1, mockUpStrand()));
+  
   
   
   

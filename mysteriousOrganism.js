@@ -51,7 +51,6 @@ const returnRandBase = () => {
           }
         }
         let percentile = count / this.dna[0].length * 100;
-        console.log(percentile)
         if (percentile >= 60) {
          return true       
         } else 
@@ -60,16 +59,27 @@ const returnRandBase = () => {
     }
   };
   
-  let mutantOne = pAequorFactory(1 , mockUpStrand());
-  console.log(mutantOne.specimenNum + '\n' + mutantOne.dna)
+  function pAequorColonyGenerator (num){
+    var pAequorColony = [];
+    let count = 0;
+    
+      while (pAequorColony.length < num) {
+        pAequorColony.push(pAequorFactory(count, mockUpStrand()))
+      
+      if(pAequorColony[count].willLikelySurvive() === false) {
+        pAequorColony.pop()
+      } else {
+        count++
+        console.log(count)
+      }
+    }
+    return pAequorColony
+  };
   
-  mutantOne.mutate()
-  console.log(mutantOne.dna[0].join(''))
-  let mutantTwo = pAequorFactory(2 , mockUpStrand());
-  console.log(mutantTwo.dna[0].join(''))
-  mutantOne.compareDna(mutantTwo)
+  var colony = pAequorColonyGenerator(30)
   
-  console.log(mutantOne.willLikelySurvive())
+  
+  console.log(colony)
   
   
   

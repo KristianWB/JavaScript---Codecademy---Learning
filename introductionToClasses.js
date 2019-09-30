@@ -15,3 +15,10 @@ class Dog {
       this._behavior ++;
     }
   }
+  
+  const halley = new Dog('Halley');
+  console.log(halley._name)
+  console.log(halley._behavior)
+  halley.incrementBehavior()
+  console.log(halley._name)
+  console.log(halley._behavior)

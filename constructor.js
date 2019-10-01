@@ -1,9 +1,9 @@
 class Surgeon {
     constructor(name, department) {
-      this.name = name;
-      this.department = department;
+      this._name = name;
+      this._department = department;
     }
   }
   
-  const surgeonCurry = new Surgeon('Curry', 'Cardiovascular')
-  const surgeonDurant = new Surgeon('Durant', 'Orthopedics')
+  const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+  const surgeonDurant = new Surgeon('Durant', 'Orthopedics');

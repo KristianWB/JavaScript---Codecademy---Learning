@@ -37,3 +37,6 @@ class HospitalEmployee {
   const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
   nurseOlynyk.takeVacationDays(5);
   console.log(nurseOlynyk.remainingVacationDays);
+  
+  //10.3
+  nurseOlynyk.addCertification('Genetics')

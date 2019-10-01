@@ -36,9 +36,18 @@ class Media{
       return averageRating
     }
     
-    //6.8
+    //6.8 - 12
     addRating(number){
       this._ratings.push(number)
+    }
+    
+  }
+  
+  class Book extends Media{
+    constructor(author, title, pages){
+      super(title)
+      this.author = author
+      this.pages = pages
     }
     
   }

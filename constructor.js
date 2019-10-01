@@ -24,3 +24,5 @@ class Surgeon {
   
   const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
   const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
+  
+  console.log(surgeonCurry.name)

@@ -40,3 +40,6 @@ class HospitalEmployee {
   
   //10.3
   nurseOlynyk.addCertification('Genetics')
+  
+  //10.4
+  console.log(nurseOlynyk.certifications)

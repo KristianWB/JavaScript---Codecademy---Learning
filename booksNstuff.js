@@ -86,12 +86,17 @@ class Media{
   console.log('8.15')
   console.log(historyOfEverything)
   
-  //8.16
+  //8.16 + 8.17
   historyOfEverything.toggleCheckOutStatus()
   console.log('8.16')
     console.log(historyOfEverything)
   
-  //8.17
+  //8.18
+  historyOfEverything.addRating(4)
+  historyOfEverything.addRating(5)
+  historyOfEverything.addRating(5)
+  
+  
   
   
   

@@ -99,6 +99,11 @@ class Media{
   //8.19
   console.log(historyOfEverything.getAverageRating())
   
+  //8.20
+  const speed = new Movie('Speed', 'Jan de Bont', 116)
+  console.log(speed);
+  
+  
   
   
   

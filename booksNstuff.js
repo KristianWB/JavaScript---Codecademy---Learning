@@ -43,6 +43,7 @@ class Media{
     
   }
   
+  // Setting up the Book Class
   class Book extends Media{
     constructor(author, title, pages){
       super(title)
@@ -52,19 +53,36 @@ class Media{
   
     // 6.13
     get author(){
-      return this._author
+      return this._author;
     }
     
     get pages(){
-      return this._pages
+      return this._pages;
     }
     
   }
   
-  let test = new Media('booHoo')
-  test.addRating(1)
-  test.addRating(2)
-  test.addRating(3)
-  test.addRating(4)
-  test.addRating(5)
-  console.log(test.getAverageRating())
+  // Setting up the Movie class
+  //6.14
+  class Movie extends Media{
+    constructor(title, director, runTime){
+      super(title);
+      this._director=director;
+      this._runTime=runTime;
+    }
+    
+    get director(){
+      return this._director;
+    }
+    
+    get runtime(){
+      return this._runTime;
+    }
+  }
+  
+  //6.15
+  let historyOfEverything = new Book('Bill Bryson', 'A Short History of Nearly Everything', 544)
+  
+  console.log(historyOfEverything)
+  
+  

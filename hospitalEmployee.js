@@ -43,3 +43,5 @@ class HospitalEmployee {
   
   //10.4
   console.log(nurseOlynyk.certifications)
+
+  //11 Static Methods

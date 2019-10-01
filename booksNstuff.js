@@ -96,6 +96,9 @@ class Media{
   historyOfEverything.addRating(5)
   historyOfEverything.addRating(5)
   
+  //8.19
+  console.log(historyOfEverything.getAverageRating())
+  
   
   
   

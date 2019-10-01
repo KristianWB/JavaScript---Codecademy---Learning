@@ -27,6 +27,11 @@ class HospitalEmployee {
     get certifications(){
       return this._certifications;
     }
+    
+    //10.2
+    addCertification(newCertification){
+      this._certifications.push(newCertification);
+    }
   }
   
   const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);

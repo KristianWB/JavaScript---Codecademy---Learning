@@ -29,4 +29,7 @@ class Surgeon {
   console.log(surgeonCurry.name)
   
   //5.2
-  surgeonCurry.takeVacationDays(3);a
+  surgeonCurry.takeVacationDays(3);
+  
+  //5.3
+  console.log(surgeonCurry.remainingVacationDays)

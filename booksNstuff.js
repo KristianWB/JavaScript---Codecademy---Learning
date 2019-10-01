@@ -103,11 +103,17 @@ class Media{
   const speed = new Movie('Speed', 'Jan de Bont', 116)
   console.log(speed);
   
-  //8.21
+  //8.21 and 8.22
   speed.toggleCheckOutStatus();
   console.log(speed.isCheckedOut);
   
-  //8.22
+  //8.23
+  speed.addRating(1);
+  speed.addRating(1);
+  speed.addRating(5);
+  
+  //8.24
+  console.log(speed.getAverageRating());
   
   
   

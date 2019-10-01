@@ -43,3 +43,5 @@ class HospitalEmployee {
   console.log(nurseOlynyk.remainingVacationDays);
   nurseOlynyk.addCertification('Genetics');
   console.log(nurseOlynyk.certifications);
+
+  //12 - Review Classes

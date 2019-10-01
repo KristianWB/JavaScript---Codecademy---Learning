@@ -31,3 +31,5 @@ class HospitalEmployee {
   
   //9.2
   console.log(nurseOlynyk.remainingVacationDays)
+
+  //10

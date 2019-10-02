@@ -79,5 +79,6 @@ class School {
   let lorraineHansbury = new PrimarySchool('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.')
   console.log(lorraineHansbury)
   
+  //8.15
   lorraineHansbury.quickFacts()
   

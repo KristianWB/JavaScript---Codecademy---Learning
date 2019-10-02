@@ -39,7 +39,7 @@ class School {
     
     //8.7
     static pickSubstituteTeacher(substituteTeachers){
-      let randomNumber = Math.floor(Math.random() * substituteTeachers.length);
+      let randomNumber = Math.floor(Math.random() * (substituteTeachers.length));
       console.log(randomNumber);
       return substituteTeachers[randomNumber];
     }  
@@ -88,6 +88,11 @@ class School {
   //8.16
   console.log(School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']))
   console.log("\n")
+  
+  //8.16 - HighSchool instance
+  const alSmith = new HighSchool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field'])
+  
   console.log("Terminal point")
+  
   
   

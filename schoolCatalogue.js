@@ -78,7 +78,16 @@ class School {
   //8.14
   let lorraineHansbury = new PrimarySchool('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.')
   console.log(lorraineHansbury)
+  console.log("\n")
   
   //8.15
   lorraineHansbury.quickFacts()
+  console.log("\n")
+  
+  
+  //8.16
+  console.log(School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']))
+  console.log("\n")
+  console.log("Terminal point")
+  
   

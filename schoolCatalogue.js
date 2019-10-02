@@ -75,7 +75,10 @@ class School {
     };
   }
   
-  let test = new HighSchool('abc', 20, 'Suckers')
+  //8.14
+  let lorraineHansbury = new PrimarySchool('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.')
   console.log(test)
+  
+  
   
   

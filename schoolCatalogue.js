@@ -30,10 +30,13 @@ class School {
       } else {
         console.log('Invalid input: numberOfStudents must be set to a Number.');
       }    
-    } 
+    }
+    
+    //1.6 - Setting up quickfacts method
+    quickFacts(){
+      console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`);
+    }
   }
   
   let test = new School('abc', 'Primary', 23)
-  console.log(test)
-  test.numberOfStudents = 50;
-  console.log(test.numberOfStudents)
+  test.quickFacts()

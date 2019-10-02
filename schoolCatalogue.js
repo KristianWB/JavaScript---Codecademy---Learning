@@ -57,9 +57,25 @@ class School {
       //8.11
       this._pickupPolicy=pickupPolicy;
     }
+    
+    get pickupPolicy(){
+      return this._pickupPolicy;
+    }
   }
   
-  let test = new PrimarySchool('abc', 20, 'School bus')
+  //8.13
+  class HighSchool extends School{
+    constructor(name, numberOfStudents, sportsTeam){
+      super(name, 'HighSchool', numberOfStudents);
+      this._sportsTeam=sportsTeam;
+    };
+    
+    get sportsTeam(){
+      return this._sportsTeam;
+    };
+  }
+  
+  let test = new HighSchool('abc', 20, 'Suckers')
   console.log(test)
   
   

@@ -29,7 +29,7 @@ class School {
         this._numberOfStudents = newNumberOfStudents;
       } else {
         console.log('Invalid input: numberOfStudents must be set to a Number.');
-      }    
+      }
     }
     
     //1.6 - Setting up quickfacts method
@@ -39,8 +39,9 @@ class School {
     
     //1.7
     static pickSubstituteTeacher(substituteTeachers){
-      let randomNumber = Math.floor(Math.random * (substituteTeachers.length-1));
-      return substituteTeachers[randomNumber);
+      let randomNumber = Math.floor(Math.random() * substituteTeachers.length);
+      console.log(randomNumber);
+      return substituteTeachers[randomNumber];
     }
     
     
@@ -48,4 +49,5 @@ class School {
   }
   
   let test = new School('abc', 'Primary', 23)
-  test.quickFacts()
+  let teachers = ['Mark', 'Cassel', 'Irving'];
+  console.log(School.pickSubstituteTeacher(teachers))

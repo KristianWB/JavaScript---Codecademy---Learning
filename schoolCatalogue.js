@@ -52,13 +52,12 @@ class School {
     constructor(name, numberOfStudents, pickupPolicy){
       
       //8.10 - calling supers
-      super(name);
-      level = 'primary';
-      super(numberOfStudents);
+      super(name, 'Primary', numberOfStudents);
       this._pickupPolicy=pickupPolicy;
     }
   }
   
-  let test = new PrimarySchool
+  let test = new PrimarySchool('abc', 20, 'School bus')
+  console.log(test)
   
   

@@ -1,17 +1,17 @@
-//1.0
+//8.0
 
-//1.1
+//8.1
 class School {
-    //1.2 - Building Constructor
+    //8.2 - Building Constructor
     constructor(name, level, numberOfStudents){
       
-      //1.3 - Setting up properties
+      //8.3 - Setting up properties
       this._name=name;
       this._level=level;
       this._numberOfStudents=numberOfStudents;
     }
     
-    //1.4 - Getters
+    //8.4 - Getters
     get name(){
       return this._name;
     }
@@ -22,7 +22,7 @@ class School {
       return this._numberOfStudents;
     }
     
-    //1.5 - setter for numberOfStudents
+    //8.5 - setter for numberOfStudents
     set numberOfStudents(newNumberOfStudents){
       // Checking for input type    
       if(typeof newNumberOfStudents === "number"){
@@ -32,22 +32,22 @@ class School {
       }
     }
     
-    //1.6 - Setting up quickfacts method
+    //8.6 - Setting up quickfacts method
     quickFacts(){
       console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`);
     }
     
-    //1.7
+    //8.7
     static pickSubstituteTeacher(substituteTeachers){
       let randomNumber = Math.floor(Math.random() * substituteTeachers.length);
       console.log(randomNumber);
       return substituteTeachers[randomNumber];
-    }
-    
-    
+    }  
+  }
+  
+  //8.8
+  class PrimarySchool extends School {
     
   }
   
-  let test = new School('abc', 'Primary', 23)
-  let teachers = ['Mark', 'Cassel', 'Irving'];
-  console.log(School.pickSubstituteTeacher(teachers))
+  

@@ -88,15 +88,17 @@ class School {
   console.log(School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']))
   console.log("\n")
   
-  //8.16 - HighSchool instance
+  //8.16 - testing HighSchool instance build
   const alSmith = new HighSchool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field'])
   
-  //8.17
+  //8.17 - testing method
   console.log(alSmith.sportsTeams)
   console.log("\n")
   
   
   console.log("Terminal point")
+  
+  //8.19 - the assignment is completed
   
   
   

@@ -36,6 +36,15 @@ class School {
     quickFacts(){
       console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`);
     }
+    
+    //1.7
+    static pickSubstituteTeacher(substituteTeachers){
+      let randomNumber = Math.floor(Math.random * (substituteTeachers.length-1));
+      return substituteTeachers[randomNumber);
+    }
+    
+    
+    
   }
   
   let test = new School('abc', 'Primary', 23)

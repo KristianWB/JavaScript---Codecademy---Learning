@@ -40,7 +40,6 @@ class School {
     //8.7
     static pickSubstituteTeacher(substituteTeachers){
       let randomNumber = Math.floor(Math.random() * (substituteTeachers.length));
-      console.log(randomNumber);
       return substituteTeachers[randomNumber];
     }  
   }
@@ -65,13 +64,13 @@ class School {
   
   //8.13
   class HighSchool extends School{
-    constructor(name, numberOfStudents, sportsTeam){
+    constructor(name, numberOfStudents, sportsTeams){
       super(name, 'HighSchool', numberOfStudents);
-      this._sportsTeam=sportsTeam;
+      this._sportsTeams=sportsTeams;
     };
     
-    get sportsTeam(){
-      return this._sportsTeam;
+    get sportsTeams(){
+      return this._sportsTeams;
     };
   }
   
@@ -92,7 +91,14 @@ class School {
   //8.16 - HighSchool instance
   const alSmith = new HighSchool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field'])
   
+  //8.17
+  console.log(alSmith.sportsTeams)
+  console.log("\n")
+  
+  
   console.log("Terminal point")
+  
+  
   
   
   

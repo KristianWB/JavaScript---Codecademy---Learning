@@ -22,4 +22,18 @@ class School {
       return this._numberOfStudents;
     }
     
+    //1.5 - setter for numberOfStudents
+    set numberOfStudents(newNumberOfStudents){
+      // Checking for input type    
+      if(typeof newNumberOfStudents === "number"){
+        this._numberOfStudents = newNumberOfStudents;
+      } else {
+        console.log('Invalid input: numberOfStudents must be set to a Number.');
+      }    
+    } 
   }
+  
+  let test = new School('abc', 'Primary', 23)
+  console.log(test)
+  test.numberOfStudents = 50;
+  console.log(test.numberOfStudents)

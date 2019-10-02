@@ -45,9 +45,20 @@ class School {
     }  
   }
   
-  //8.8
+  //8.8 - Primary school build
   class PrimarySchool extends School {
     
+    //8.9 - constructor build
+    constructor(name, numberOfStudents, pickupPolicy){
+      
+      //8.10 - calling supers
+      super(name);
+      level = 'primary';
+      super(numberOfStudents);
+      this._pickupPolicy=pickupPolicy;
+    }
   }
+  
+  let test = new PrimarySchool
   
   

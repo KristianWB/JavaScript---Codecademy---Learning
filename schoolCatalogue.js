@@ -53,6 +53,8 @@ class School {
       
       //8.10 - calling supers
       super(name, 'Primary', numberOfStudents);
+      
+      //8.11
       this._pickupPolicy=pickupPolicy;
     }
   }

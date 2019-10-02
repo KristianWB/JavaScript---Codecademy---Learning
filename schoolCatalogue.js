@@ -11,4 +11,15 @@ class School {
       this._numberOfStudents=numberOfStudents;
     }
     
+    //1.4 - Getters
+    get name(){
+      return this._name;
+    }
+    get level(){
+      return this._level;
+    }
+    get numberOfStudents(){
+      return this._numberOfStudents;
+    }
+    
   }

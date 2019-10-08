@@ -201,3 +201,11 @@ function isLowSodium() {
     The export keyword allows us to export objects upon declaration, as shown in export let specialty and export function isVegetarian() {}.
     We no longer need an export statement at the bottom of our file, since this behavior is handled above.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+#10 - Import Named Imports
+
+To import variables that are declared, we simply use the original syntax that describes the variable name. In other words, exporting upon declaration does not have an impact on how we import the variables.
+
+import { specialty, isVegetarian } from 'menu';
+
+----------------------------------------------------------------------------------------------------------------------------------------------

@@ -123,3 +123,64 @@ import Menu from './menu';
 We can then continue using the Menu module in the order.js file.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+#7 - Named exports
+
+Intermediate JavaScript Modules
+Named Exports
+
+ES6 introduced a second common approach to export modules. In addition to export default, named exports allow us to export data through the use of variables.
+
+Let’s see how this works. In menu.js we would be sure to give each piece of data a distinct variable name:
+
+let specialty = '';
+function isVegetarian() {
+}; 
+function isLowSodium() {
+}; 
+
+export { specialty, isVegetarian };
+
+    Notice that, when we use named exports, we are not setting the properties on an object. Each export is stored in its own variable.
+    specialty is a string object, while isVegetarian and isLowSodium are objects in the form of functions. Recall that in JavaScript, every function is in fact a function object.
+    export { specialty, isVegetarian }; exports objects by their variable names. Notice the keyword export is the prefix.
+    specialty and isVegetarian are exported, while isLowSodium is not exported, since it is not specified in the export syntax.
+
+Instructions
+1.
+
+Remove the statement that sets Airplane to an empty object, and remove the entire export default line.
+
+You will see an error in the console, but we’ll fix this in the next step.
+2.
+
+Modify the availableAirplanes array such that it is a variable defined with let and no longer a property on the Airplane object.
+3.
+
+Let’s add some more data to the availableAirplanes array.
+
+In the first object, AeroJet, add a property availableStaff, and set it equal to an array with the elements 'pilots', 'flightAttendants', 'engineers', 'medicalAssistance', and 'sensorOperators'.
+
+In the second object, SkyJet, add a property availableStaff, and set it equal to an array with the elements 'pilots' and 'flightAttendants'.
+4.
+
+Define a new variable with let named flightRequirements, and set it equal to an empty object.
+5.
+
+Within the flightRequirements object, add a property requiredStaff, and set this equal to 4.
+6.
+
+Define a function with the name meetsStaffRequirements() that takes availableStaff and requiredStaff as parameters.
+7.
+
+In the body of the meetsStaffRequirements() function, write logic to check if the length of the availableStaff array is greater than or equal to requiredStaff.
+
+The function should contain this logic:
+
+if length of availableStaff is greater than or equal to requiredStaff
+  return true
+else 
+  return false 
+
+8.
+
+Using the export keyword, export the variables availableAirplanes, flightRequirements and meetsStaffRequirements.

@@ -50,8 +50,10 @@ placeOrder();
 
 We now have the entire behavior of Menu available in order.js. Here, we notice:
 
-    In order.js we import the module by creating a const variable called Menu and setting it equal to the value of the require() function. We can set the name of this variable to anything we like, such as menuItems.
-    require() is a JavaScript function that loads a module. It’s argument is the file path of the module: ./menu.js. With require(), the .js extension is optional and will be assumed if it is not included.
+    In order.js we import the module by creating a const variable called Menu and setting it equal to the value of the require() function.
+     We can set the name of this variable to anything we like, such as menuItems.
+    require() is a JavaScript function that loads a module. It’s argument is the file path of the module: ./menu.js. With require(),
+     the .js extension is optional and will be assumed if it is not included.
     The placeOrder() function then uses the Menu module. By calling Menu.specialty, we access the property specialty defined in the Menu module.
 
 Taking a closer look, the pattern to import a module is:
@@ -59,3 +61,30 @@ Taking a closer look, the pattern to import a module is:
     Import the module with require() and assign it to a local variable.
     Use the module and its properties within a program.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#4 - module.exports II
+
+We can also wrap any collection of data and functions in an object, and export the object using module.exports. In menu.js, we could write:
+
+module.exports = {
+  specialty: "Roasted Beet Burger with Mint Sauce",
+  getSpecialty: function() {
+    return this.specialty;
+  } 
+}; 
+
+In the above code, notice:
+
+    module.exports exposes the current module as an object.
+    specialty and getSpecialty are properties on the object.
+
+Then in order.js, we write:
+
+const Menu = require('./menu.js');
+
+console.log(Menu.getSpecialty());
+
+Here we can still access the behavior in the Menu module.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------

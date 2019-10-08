@@ -288,3 +288,14 @@ Here we use the export keyword to export the variables upon declaration, and aga
 While it’s better to avoid combining two methods of exporting, it is useful on occasion. For example, if you suspect developers may only be interested in importing a specific function and won’t need to import the entire default export.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+#14 - Combining Import Statements
+
+We can import the collection of objects and functions with the same data.
+
+We can use an import keyword to import both types of variables as such:
+
+import { specialty, isVegetarian, isLowSodium } from './menu';
+
+import GlutenFree from './menu';
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------

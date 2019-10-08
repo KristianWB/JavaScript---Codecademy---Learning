@@ -13,4 +13,5 @@ function displayFuelCapacity() {
   });
 }
 
+//#6.6 - calling the function
 displayFuelCapacity()

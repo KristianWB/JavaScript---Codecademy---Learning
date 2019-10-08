@@ -103,4 +103,23 @@ export default Menu;
     export default uses the JavaScript export statement to export JavaScript objects, functions, and primitive data types.
     Menu refers to the name of the Menu object, the object that we are setting the properties on within our modules.
 
-When using ES6 syntax, we use export default in place of module.exports. Node.js doesn’t support export default by default, so module.exports is usually used for Node.js development and ES6 syntax is used for front-end development. As with most ES6 features, it is common to transpile code since ES6 is not supported by all browsers.
+When using ES6 syntax, we use export default in place of module.exports. Node.js doesn’t support export default by default,
+ so module.exports is usually used for Node.js development and ES6 syntax is used for front-end development. As with most ES6 features,
+  it is common to transpile code since ES6 is not supported by all browsers.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#6 - Import
+
+ES6 module syntax also introduces the import keyword for importing objects. In our order.js example, we import an object like this:
+
+import Menu from './menu';
+
+    The import keyword begins the statement.
+    The keyword Menu here specifies the name of the variable to store the default export in.
+    from specifies where to load the module from.
+    './menu' is the name of the module to load. When dealing with local files, it specifically refers to the name of the file without the extension of the file.
+
+We can then continue using the Menu module in the order.js file.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
